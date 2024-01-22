@@ -1,0 +1,215 @@
+2024-01-22 17:41:44.314 +05:30 [INF] User profile is available. Using 'C:\Users\dev53\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-22 17:41:44.506 +05:30 [INF] Now listening on: https://localhost:7254
+2024-01-22 17:41:44.507 +05:30 [INF] Now listening on: http://localhost:5194
+2024-01-22 17:41:44.514 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-22 17:41:44.517 +05:30 [INF] Hosting environment: Development
+2024-01-22 17:41:44.518 +05:30 [INF] Content root path: D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\
+2024-01-22 17:41:44.766 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/index.html - -
+2024-01-22 17:41:45.049 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/index.html - - - 200 - text/html;charset=utf-8 288.0112ms
+2024-01-22 17:41:45.051 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - -
+2024-01-22 17:41:45.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.5535ms
+2024-01-22 17:41:45.066 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_vs/browserLink - -
+2024-01-22 17:41:45.108 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.8620ms
+2024-01-22 17:41:45.241 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - -
+2024-01-22 17:41:45.340 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.1574ms
+2024-01-22 17:42:24.395 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/User - -
+2024-01-22 17:42:24.528 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI)'
+2024-01-22 17:42:24.546 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUsers() on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 17:42:24.944 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LudoWebAPI.Models.User, LudoWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-22 17:42:24.975 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI) in 424.2542ms
+2024-01-22 17:42:24.980 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI)'
+2024-01-22 17:42:24.984 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/User - - - 200 - application/json;+charset=utf-8 588.8297ms
+2024-01-22 17:42:29.387 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Store/buy-dice application/json 109
+2024-01-22 17:42:29.390 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.StoreController.BuyDice (LudoWebAPI)'
+2024-01-22 17:42:29.398 +05:30 [INF] Route matched with {action = "BuyDice", controller = "Store"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BuyDice(LudoWebAPI.Models.Entity.PurchaseRequest) on controller LudoWebAPI.Controllers.StoreController (LudoWebAPI).
+2024-01-22 17:42:29.515 +05:30 [INF] Executed action LudoWebAPI.Controllers.StoreController.BuyDice (LudoWebAPI) in 115.6737ms
+2024-01-22 17:42:29.516 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.StoreController.BuyDice (LudoWebAPI)'
+2024-01-22 17:42:29.610 +05:30 [ERR] Unhandled exception
+System.InvalidOperationException: Insufficient coins to buy the dice
+   at LudoWebAPI.Services.StoreService.BuyDice(User user, String diceId) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Services\StoreService.cs:line 50
+   at LudoWebAPI.Controllers.StoreController.BuyDice(PurchaseRequest request) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Controllers\StoreController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LudoWebAPI.Middleware.CustomAuthorizationMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\CustomAuthorizationMiddleware.cs:line 35
+   at LudoWebAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\ErrorHandlingMiddleware.cs:line 20
+2024-01-22 17:42:29.613 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Store/buy-dice application/json 109 - 500 - application/json 225.6475ms
+2024-01-22 17:50:35.208 +05:30 [INF] User profile is available. Using 'C:\Users\dev53\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-22 17:50:35.425 +05:30 [INF] Now listening on: https://localhost:7254
+2024-01-22 17:50:35.427 +05:30 [INF] Now listening on: http://localhost:5194
+2024-01-22 17:50:35.434 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-22 17:50:35.436 +05:30 [INF] Hosting environment: Development
+2024-01-22 17:50:35.438 +05:30 [INF] Content root path: D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\
+2024-01-22 17:50:38.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/index.html - -
+2024-01-22 17:50:38.468 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - -
+2024-01-22 17:50:38.468 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_vs/browserLink - -
+2024-01-22 17:50:38.468 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/index.html - - - 200 - text/html;charset=utf-8 284.6452ms
+2024-01-22 17:50:38.479 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 11.1329ms
+2024-01-22 17:50:38.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.8890ms
+2024-01-22 17:50:38.665 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - -
+2024-01-22 17:50:38.771 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.7642ms
+2024-01-22 17:50:45.963 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/Login application/json 52
+2024-01-22 17:50:46.035 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Login (LudoWebAPI)'
+2024-01-22 17:50:46.060 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LudoWebAPI.Models.Entity.LoginRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 17:50:46.552 +05:30 [INF] Executing OkObjectResult, writing value of type 'LudoWebAPI.Models.DTO.UserLoginResponse'.
+2024-01-22 17:50:46.569 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Login (LudoWebAPI) in 503.8182ms
+2024-01-22 17:50:46.574 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Login (LudoWebAPI)'
+2024-01-22 17:50:46.577 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/Login application/json 52 - 200 - application/json;+charset=utf-8 613.8875ms
+2024-01-22 17:50:58.332 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Store/items - -
+2024-01-22 17:50:58.382 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.StoreController.GetStoreItems (LudoWebAPI)'
+2024-01-22 17:50:58.385 +05:30 [INF] Route matched with {action = "GetStoreItems", controller = "Store"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStoreItems() on controller LudoWebAPI.Controllers.StoreController (LudoWebAPI).
+2024-01-22 17:50:58.410 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LudoWebAPI.Models.StoreItem, LudoWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-22 17:50:58.416 +05:30 [INF] Executed action LudoWebAPI.Controllers.StoreController.GetStoreItems (LudoWebAPI) in 30.4548ms
+2024-01-22 17:50:58.417 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.StoreController.GetStoreItems (LudoWebAPI)'
+2024-01-22 17:50:58.418 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Store/items - - - 200 - application/json;+charset=utf-8 86.4730ms
+2024-01-22 17:52:32.513 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------555086292970728959821611 4243
+2024-01-22 17:52:32.522 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:52:32.526 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(LudoWebAPI.Models.Entity.UserRegistrationRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 17:52:32.594 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Register (LudoWebAPI) in 67.3597ms
+2024-01-22 17:52:32.595 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:52:32.703 +05:30 [ERR] Unhandled exception
+System.InvalidOperationException: Username already exists
+   at LudoWebAPI.Services.UserService.RegisterUser(User user, IFormFile avatar) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Services\UserService.cs:line 49
+   at LudoWebAPI.Controllers.UserController.Register(UserRegistrationRequest request) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Controllers\UserController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LudoWebAPI.Middleware.CustomAuthorizationMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\CustomAuthorizationMiddleware.cs:line 35
+   at LudoWebAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\ErrorHandlingMiddleware.cs:line 20
+2024-01-22 17:52:32.707 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------555086292970728959821611 4243 - 500 - application/json 194.1727ms
+2024-01-22 17:53:04.496 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------455479959578558969430647 4243
+2024-01-22 17:53:04.499 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:53:04.500 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(LudoWebAPI.Models.Entity.UserRegistrationRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 17:53:04.531 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Register (LudoWebAPI) in 30.0566ms
+2024-01-22 17:53:04.532 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:53:04.590 +05:30 [ERR] Unhandled exception
+System.InvalidOperationException: Email already exists
+   at LudoWebAPI.Services.UserService.RegisterUser(User user, IFormFile avatar) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Services\UserService.cs:line 54
+   at LudoWebAPI.Controllers.UserController.Register(UserRegistrationRequest request) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Controllers\UserController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LudoWebAPI.Middleware.CustomAuthorizationMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\CustomAuthorizationMiddleware.cs:line 35
+   at LudoWebAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\ErrorHandlingMiddleware.cs:line 20
+2024-01-22 17:53:04.593 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------455479959578558969430647 4243 - 500 - application/json 96.8917ms
+2024-01-22 17:54:49.299 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------716820857044566506346998 4240
+2024-01-22 17:54:49.300 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:54:49.300 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(LudoWebAPI.Models.Entity.UserRegistrationRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 17:54:49.394 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-22 17:54:49.396 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Register (LudoWebAPI) in 94.6336ms
+2024-01-22 17:54:49.396 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 17:54:49.397 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------716820857044566506346998 4240 - 200 - text/plain;+charset=utf-8 98.0340ms
+2024-01-22 18:02:13.668 +05:30 [INF] User profile is available. Using 'C:\Users\dev53\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-22 18:02:13.848 +05:30 [INF] Now listening on: https://localhost:7254
+2024-01-22 18:02:13.849 +05:30 [INF] Now listening on: http://localhost:5194
+2024-01-22 18:02:13.856 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-22 18:02:13.858 +05:30 [INF] Hosting environment: Development
+2024-01-22 18:02:13.860 +05:30 [INF] Content root path: D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\
+2024-01-22 18:02:16.884 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/index.html - -
+2024-01-22 18:02:17.176 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_vs/browserLink - -
+2024-01-22 18:02:17.176 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - -
+2024-01-22 18:02:17.177 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/index.html - - - 200 - text/html;charset=utf-8 298.2848ms
+2024-01-22 18:02:17.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.3446ms
+2024-01-22 18:02:17.232 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.6032ms
+2024-01-22 18:02:17.371 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - -
+2024-01-22 18:02:17.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.4262ms
+2024-01-22 18:02:22.900 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------485885286487740678173866 4240
+2024-01-22 18:02:23.370 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 18:02:23.395 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(LudoWebAPI.Models.Entity.UserRegistrationRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 18:02:24.113 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Register (LudoWebAPI) in 713.3593ms
+2024-01-22 18:02:24.118 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Register (LudoWebAPI)'
+2024-01-22 18:02:24.239 +05:30 [ERR] Unhandled exception
+System.InvalidOperationException: Username already exists
+   at LudoWebAPI.Services.UserService.RegisterUser(User user, IFormFile avatar) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Services\UserService.cs:line 49
+   at LudoWebAPI.Controllers.UserController.Register(UserRegistrationRequest request) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Controllers\UserController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LudoWebAPI.Middleware.CustomAuthorizationMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\CustomAuthorizationMiddleware.cs:line 35
+   at LudoWebAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\Middleware\ErrorHandlingMiddleware.cs:line 20
+2024-01-22 18:02:24.247 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/register multipart/form-data;+boundary=--------------------------485885286487740678173866 4240 - 500 - application/json 1346.9857ms
+2024-01-22 18:12:43.656 +05:30 [INF] User profile is available. Using 'C:\Users\dev53\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-22 18:12:43.850 +05:30 [INF] Now listening on: https://localhost:7254
+2024-01-22 18:12:43.852 +05:30 [INF] Now listening on: http://localhost:5194
+2024-01-22 18:12:43.859 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-22 18:12:43.861 +05:30 [INF] Hosting environment: Development
+2024-01-22 18:12:43.863 +05:30 [INF] Content root path: D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\
+2024-01-22 18:12:46.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/index.html - -
+2024-01-22 18:12:46.469 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/index.html - - - 200 - text/html;charset=utf-8 284.9810ms
+2024-01-22 18:12:46.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - -
+2024-01-22 18:12:46.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_vs/browserLink - -
+2024-01-22 18:12:46.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.2898ms
+2024-01-22 18:12:46.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.3539ms
+2024-01-22 18:12:46.639 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - -
+2024-01-22 18:12:46.739 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.1721ms
+2024-01-22 18:15:24.495 +05:30 [INF] Application is shutting down...
+2024-01-22 18:15:59.211 +05:30 [INF] User profile is available. Using 'C:\Users\dev53\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-22 18:15:59.394 +05:30 [INF] Now listening on: https://localhost:7254
+2024-01-22 18:15:59.396 +05:30 [INF] Now listening on: http://localhost:5194
+2024-01-22 18:15:59.402 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-22 18:15:59.405 +05:30 [INF] Hosting environment: Development
+2024-01-22 18:15:59.407 +05:30 [INF] Content root path: D:\LudoGame_22012024\LudoApplication_2\LudoWebAPI\
+2024-01-22 18:15:59.764 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/index.html - -
+2024-01-22 18:16:00.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - -
+2024-01-22 18:16:00.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/_vs/browserLink - -
+2024-01-22 18:16:00.050 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/index.html - - - 200 - text/html;charset=utf-8 287.7264ms
+2024-01-22 18:16:00.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.8853ms
+2024-01-22 18:16:02.196 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 2147.0638ms
+2024-01-22 18:16:02.227 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - -
+2024-01-22 18:16:02.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.3307ms
+2024-01-22 18:16:12.998 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7254/api/Leaderboard - -
+2024-01-22 18:16:13.466 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-22 18:16:13.471 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-22 18:16:13.472 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7254/api/Leaderboard - - - 401 0 - 473.7017ms
+2024-01-22 18:16:26.410 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/User/Login application/json 52
+2024-01-22 18:16:26.416 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.Login (LudoWebAPI)'
+2024-01-22 18:16:26.439 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LudoWebAPI.Models.Entity.LoginRequest) on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 18:16:27.150 +05:30 [INF] Executing OkObjectResult, writing value of type 'LudoWebAPI.Models.DTO.UserLoginResponse'.
+2024-01-22 18:16:27.167 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.Login (LudoWebAPI) in 722.8704ms
+2024-01-22 18:16:27.171 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.Login (LudoWebAPI)'
+2024-01-22 18:16:27.174 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/User/Login application/json 52 - 200 - application/json;+charset=utf-8 764.0259ms
+2024-01-22 18:16:36.944 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/User - -
+2024-01-22 18:16:36.988 +05:30 [INF] Executing endpoint 'LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI)'
+2024-01-22 18:16:36.990 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUsers() on controller LudoWebAPI.Controllers.UserController (LudoWebAPI).
+2024-01-22 18:16:37.016 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LudoWebAPI.Models.User, LudoWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-22 18:16:37.029 +05:30 [INF] Executed action LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI) in 38.4441ms
+2024-01-22 18:16:37.030 +05:30 [INF] Executed endpoint 'LudoWebAPI.Controllers.UserController.GetAllUsers (LudoWebAPI)'
+2024-01-22 18:16:37.032 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/User - - - 200 - application/json;+charset=utf-8 87.8267ms

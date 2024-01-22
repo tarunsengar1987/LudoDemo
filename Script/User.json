@@ -1,0 +1,54 @@
+[{
+  "_id": "05c79b01-1cd4-49f2-831a-a2f5f88d2fea",
+  "Name": "admin user",
+  "Email": "admin@gmail.com",
+  "Username": "admin",
+  "Password": "123456",
+  "AvatarFileName": "52fb3c2b-2e4e-49c0-ae78-ee2cf986dc3a.jpg",
+  "Coins": "30",
+  "Score": "0",
+  "Inventory": [],
+  "LastUpdated": {
+    "$date": "2024-01-22T10:58:25.369Z"
+  }
+},
+{
+  "_id": "65c2a129-81d2-46e5-8cbd-736a01f8a116",
+  "Name": "Test User",
+  "Email": "test@gmail.com",
+  "Username": "demo",
+  "Password": "123456",
+  "AvatarFileName": "5b1c4ffe-848a-4899-beed-37ff2675755d.jpg",
+  "Coins": "0",
+  "Score": "0",
+  "Inventory": [
+    {
+      "_id": "614ae21f-6be8-4e5b-91de-eeb459a0cf32",
+      "Name": "Dice",
+      "Price": "2"
+    },
+    {
+      "_id": "6395ba66-4c83-4a9e-9605-d1b26fd84561",
+      "Name": "Costume",
+      "Price": "7"
+    },
+    {
+      "_id": "9c27bcc0-e6f0-476c-b8a4-238465ef0ed8",
+      "Name": "Board",
+      "Price": "5"
+    },
+    {
+      "_id": "614ae21f-6be8-4e5b-91de-eeb459a0cf32",
+      "Name": "Dice",
+      "Price": "2"
+    },
+    {
+      "_id": "614ae21f-6be8-4e5b-91de-eeb459a0cf32",
+      "Name": "Dice",
+      "Price": "2"
+    }
+  ],
+  "LastUpdated": {
+    "$date": "2024-01-22T10:58:50.011Z"
+  }
+}]

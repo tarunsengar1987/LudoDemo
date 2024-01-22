@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "e670c5b3-7a04-4569-a2da-58eae90e6221",
+		"name": "Ludo Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32476466"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Name",
+									"value": "Test User",
+									"type": "text"
+								},
+								{
+									"key": "Username",
+									"value": "demo",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "Avatar",
+									"type": "file",
+									"src": "/C:/Users/dev53/Pictures/avtar.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/User/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"User",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/User/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"User",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIwNWM3OWIwMS0xY2Q0LTQ5ZjItODMxYS1hMmY1Zjg4ZDJmZWEiLCJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzA1OTE2MTM4LCJleHAiOjE3MDU5MTk3MzgsImlhdCI6MTcwNTkxNjEzOH0.MLzIqULk_zU5Vtr-loa6MFL4bbHIsTIKUoR3MRzG1XI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7254/api/User",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Coins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIwNWM3OWIwMS0xY2Q0LTQ5ZjItODMxYS1hMmY1Zjg4ZDJmZWEiLCJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzA1OTE4MTU0LCJleHAiOjE3MDU5MjE3NTQsImlhdCI6MTcwNTkxODE1NH0.DyhmzVN90V5UohMzlg2mXs2-shvuYP6pggBqBxtKfJQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/User/05c79b01-1cd4-49f2-831a-a2f5f88d2fea/addCoins",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"User",
+								"05c79b01-1cd4-49f2-831a-a2f5f88d2fea",
+								"addCoins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coin Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7254/api/User/05c79b01-1cd4-49f2-831a-a2f5f88d2fea/balance",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"User",
+								"05c79b01-1cd4-49f2-831a-a2f5f88d2fea",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Costume\",\r\n  \"price\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/Store/add-item",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"add-item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7254/api/Store/items",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7254/api/Store/item/a21ae1ab-9caa-4933-8dea-73de07bd9036",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"item",
+								"a21ae1ab-9caa-4933-8dea-73de07bd9036"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-dice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"65c2a129-81d2-46e5-8cbd-736a01f8a116\",\r\n  \"itemId\": \"614ae21f-6be8-4e5b-91de-eeb459a0cf32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/Store/buy-dice",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"buy-dice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"65c2a129-81d2-46e5-8cbd-736a01f8a116\",\r\n  \"itemId\": \"9c27bcc0-e6f0-476c-b8a4-238465ef0ed8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/Store/buy-board",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"buy-board"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-costume",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"65c2a129-81d2-46e5-8cbd-736a01f8a116\",\r\n  \"itemId\": \"6395ba66-4c83-4a9e-9605-d1b26fd84561\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/Store/buy-costume",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Store",
+								"buy-costume"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leader board",
+			"item": [
+				{
+					"name": "Leader board",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7254/api/Leaderboard",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7254",
+							"path": [
+								"api",
+								"Leaderboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
